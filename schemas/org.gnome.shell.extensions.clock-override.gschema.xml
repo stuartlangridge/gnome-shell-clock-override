@@ -1,0 +1,9 @@
+<schemalist>
+  <schema id="org.gnome.shell.extensions.clock-override" path="/org/gnome/shell/extensions/clock_override/">
+    <key name="override-string" type="s">
+      <default>'Time is: %F %R:%S'</default>
+      <summary>Override string</summary>
+      <description>The text to display where the clock is. You can use special characters to include the time and date; for example '%Y-%m-%d %H.%M.%S', and see https://developer.gnome.org/glib/stable/glib-GDateTime.html#g-date-time-format</description>
+   </key>
+  </schema>
+</schemalist>
