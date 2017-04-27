@@ -15,6 +15,7 @@ const EXAMPLES = [
     ["The time as HH.MM", "%H.%M"],
     ["The time in 24-hour notation (7:30:00 am BST)", "%r"],
     ["A bell", "🔔"],
+    ["A clock", "%f"],
     ["ISO date and time (2014-01-30T04:27:00)", "%FT%T"],
     ["Something sillier", "It is %M minutes past hour %H"]
 ];
