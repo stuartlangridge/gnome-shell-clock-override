@@ -16,7 +16,24 @@ function overrider(lbl) {
     var FORMAT = settings.get_string("override-string");
     var desired = FORMAT;
     if (FORMAT.indexOf("%") > -1) {
-        desired = GLib.DateTime.new_now_local().format(FORMAT);
+        var now = GLib.DateTime.new_now_local();
+        if (FORMAT.indexOf("%f") > -1) {
+            var hour = now.get_hour();
+            // convert from 0-23 to 1-12
+            if (hour > 12) {
+                hour -= 12;
+            }
+            if (hour == 0) {
+                hour = 12;
+            }
+            var clockFaceCodePoint = 0x1f550 + (hour - 1);
+            var minute = now.get_minute();
+            if (minute >= 30) {
+                clockFaceCodePoint += 12;
+            }
+            desired = desired.replace("%f", String.fromCodePoint(clockFaceCodePoint));
+        }
+        desired = now.format(desired);
     }
     if (t != desired) {
         last = t;
