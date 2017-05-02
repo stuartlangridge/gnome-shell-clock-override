@@ -8,5 +8,5 @@
   "settings-schema": "org.gnome.shell.extensions.clock-override",
   "url": "https://github.com/stuartlangridge/gnome-shell-clock-override",
   "uuid": "clock-override@gnomeshell.kryogenix.org",
-  "version": 1
+  "version": 3
 }
