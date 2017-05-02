@@ -20,9 +20,27 @@ const EXAMPLES = [
     ["Something sillier", "It is %M minutes past hour %H"]
 ];
 
+
 const ClockOverrideSettings = new GObject.Class({
     Name: 'ClockOverridePrefs',
     Extends: Gtk.Grid,
+
+    update_textbox_value: function(value) {
+        let sval = this._settings.get_string('override-string');
+        if (sval != value) {
+            this._settings.set_string('override-string', value);
+
+            var set_clock_seconds;
+            if ((value.indexOf("%S") !== -1) || (value.indexOf("%-S") !== -1) || (value.indexOf("%r") !== -1) || (value.indexOf("%T") !== -1)) {
+                // requested time has seconds in it, so the clock needs to be updated every second
+                set_clock_seconds = true;
+            } else {
+                // requested time does not have seconds in it, so we can update the clock every minute
+                set_clock_seconds = false;
+            }
+            Gio.Settings.new("org.gnome.desktop.interface").set_boolean("clock-show-seconds", set_clock_seconds);
+        }
+    },
 
     _init: function(params) {
 
@@ -43,12 +61,8 @@ const ClockOverrideSettings = new GObject.Class({
         });
         widget = new Gtk.Entry({halign: Gtk.Align.END, text: this._settings.get_string('override-string')});
         widget.set_sensitive(true);
-        widget.connect('changed', Lang.bind(this, function(w){
-             value = w.get_text();
-             let sval = this._settings.get_string('override-string');
-             if (sval != value) {
-                 this._settings.set_string('override-string', value);
-             }
+        widget.connect('changed', Lang.bind(this, function(w) {
+            this.update_textbox_value(w.get_text());
         }));
         this.attach(label, 0, 0, 2, 1);
         this.attach(widget, 2, 0, 1, 1);
@@ -88,6 +102,7 @@ const ClockOverrideSettings = new GObject.Class({
             });
             eb.add(r);
             eb.connect("button-press-event", Lang.bind(grid, function(w) {
+                this.update_textbox_value(eg[1]);
                 grid._settings.set_string('override-string', eg[1]);
                 return true;
             }));

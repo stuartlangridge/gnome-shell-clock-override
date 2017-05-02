@@ -79,7 +79,7 @@ function overrider(lbl) {
     }
     if (t != desired) {
         last = t;
-        lbl.set_text(desired); 
+        lbl.set_text(desired);
     }
 }
 
