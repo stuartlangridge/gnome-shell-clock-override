@@ -8,16 +8,20 @@ const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
 const Convenience = Me.imports.convenience;
 
+const Gettext = imports.gettext.domain('clock-override');
+const _ = Gettext.gettext;
+
 function init() {
+    Convenience.initTranslations("clock-override");
 }
 
 const EXAMPLES = [
-    ["The time as HH.MM", "%H.%M"],
-    ["The time in 24-hour notation (7:30:00 am BST)", "%r"],
-    ["A bell", "🔔"],
-    ["A clock", "%f"],
-    ["ISO date and time (2014-01-30T04:27:00)", "%FT%T"],
-    ["Something sillier", "It is %M minutes past hour %H"]
+    [_("The time as HH.MM"), "%H.%M"],
+    [_("The time in 24-hour notation (7:30:00 am BST)"), "%r"],
+    [_("A bell"), "🔔"],
+    [_("A clock"), "%f"],
+    [_("ISO date and time (2014-01-30T04:27:00)"), "%FT%T"],
+    [_("Something sillier"), _("It is %M minutes past hour %H")]
 ];
 
 
@@ -55,7 +59,7 @@ const ClockOverrideSettings = new GObject.Class({
         let value = null;
 
         label = new Gtk.Label({
-            label: 'Text to display instead of the clock',
+            label: _("Text to display instead of the clock"),
             hexpand: true,
             halign: Gtk.Align.START
         });
@@ -68,7 +72,7 @@ const ClockOverrideSettings = new GObject.Class({
         this.attach(widget, 2, 0, 1, 1);
 
         let label2 = new Gtk.Label({
-            label: 'Some examples:',
+            label: _("Some examples:"),
             use_markup: true,
             hexpand: true,
             halign: Gtk.Align.START
@@ -114,7 +118,7 @@ const ClockOverrideSettings = new GObject.Class({
         })
 
         let label3 = new Gtk.Label({
-            label: '<a href="http://strftime.org/">What do all these % codes mean?</a>',
+            label: '<a href="http://strftime.org/">' + _("What do all these %x codes mean?") + '</a>',
             use_markup: true,
             hexpand: true,
             halign: Gtk.Align.END
