@@ -53,6 +53,8 @@ function overrider(lbl) {
     var desired = FORMAT;
     if (FORMAT.indexOf("%") > -1) {
         var now = GLib.DateTime.new_now_local();
+        var utcnow = GLib.DateTime.new_now_utc();
+
         if (FORMAT.indexOf("%f") > -1) {
             var hour = now.get_hour();
             // convert from 0-23 to 1-12
@@ -75,6 +77,12 @@ function overrider(lbl) {
             }
             desired = desired.replace("%f", repl);
         }
+        if (FORMAT.indexOf("%@") > -1) {
+            var beat_time = 0 | (((utcnow.get_hour() + 1) % 24) + utcnow.get_minute() / 60 + utcnow.get_second() / 3600) * 1000 / 24;
+            beat_time = ('000' + beat_time).slice(-3);
+            desired = desired.replace("%@", beat_time);
+        }
+
         desired = now.format(desired);
     }
     if (t != desired) {
