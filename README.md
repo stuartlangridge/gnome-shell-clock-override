@@ -7,6 +7,9 @@ Gnome Shell doesn't permit many changes to the format of its clock; in particula
 
 ![Screenshot](screenshot.png)
 
-For techies, we use the [`strftime` codes](http://strftime.org/) to specify actual times in your clock string, with a `%f` addition to mean "a little Unicode clock character" (thanks to [dsboger](https://github.com/stuartlangridge/gnome-shell-clock-override/commit/5941974a39d3dfa4f7adb227bdbe3bc50118bbc9) for that!)
+For techies, we use the [`strftime` codes](http://strftime.org/) to specify actual times in your clock string, with two additions:
+
+ * `%f`, a little Unicode clock character (thanks to [dsboger](https://github.com/stuartlangridge/gnome-shell-clock-override/commit/5941974a39d3dfa4f7adb227bdbe3bc50118bbc9) for that!
+ * `%@`, internet time (.beat)
 
 Note that we still try to honour Gnome Shell's clock settings. So if you expect your clock to show seconds (or to update once a second, rather than once a minute) then you'll need to have turned on "show seconds" in Gnome Tweak Tool (under Top Bar) (or [the terminal way](https://askubuntu.com/questions/39412/how-to-show-seconds-on-the-clock-in-gnome-3)).
