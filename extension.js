@@ -73,7 +73,7 @@ function overrider(lbl) {
             } else {
                 repl = fromCodePoint(clockFaceCodePoint);
             }
-            desired = desired.replace("%f", repl);
+            desired = desired.replace(/%f/g, repl);
         }
         desired = now.format(desired);
     }
