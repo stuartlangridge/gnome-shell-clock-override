@@ -7,7 +7,7 @@ Gnome Shell doesn't permit many changes to the format of its clock; in particula
 
 ![Screenshot](screenshot.png)
 
-For techies, we use the [`strftime` codes](http://strftime.org/) to specify actual times in your clock string, with two additions:
+For techies, we use the [`GLib GDateTime` codes](https://developer.gnome.org/glib/stable/glib-GDateTime.html#g-date-time-format) to specify actual times in your clock string, with two additions:
 
  * `%f`, a little Unicode clock character (thanks to [dsboger](https://github.com/stuartlangridge/gnome-shell-clock-override/commit/5941974a39d3dfa4f7adb227bdbe3bc50118bbc9) for that!
  * `%@`, internet time (.beat)

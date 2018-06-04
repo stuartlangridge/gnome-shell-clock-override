@@ -75,7 +75,7 @@ function overrider(lbl) {
             } else {
                 repl = fromCodePoint(clockFaceCodePoint);
             }
-            desired = desired.replace("%f", repl);
+            desired = desired.replace(/%f/g, repl);
         }
         if (FORMAT.indexOf("%@") > -1) {
             var beat_time = 0 | (((utcnow.get_hour() + 1) % 24) + utcnow.get_minute() / 60 + utcnow.get_second() / 3600) * 1000 / 24;
