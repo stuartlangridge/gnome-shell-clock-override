@@ -114,7 +114,7 @@ const ClockOverrideSettings = new GObject.Class({
         })
 
         let label3 = new Gtk.Label({
-            label: '<a href="http://strftime.org/">What do all these % codes mean?</a>',
+            label: '<a href="https://developer.gnome.org/glib/stable/glib-GDateTime.html#g-date-time-format">What do all these % codes mean?</a>',
             use_markup: true,
             hexpand: true,
             halign: Gtk.Align.END
