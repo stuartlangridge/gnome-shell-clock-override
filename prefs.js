@@ -21,6 +21,7 @@ const EXAMPLES = [
     [_("A bell"), "🔔"],
     [_("A clock"), "%f"],
     [_("ISO date and time (2014-01-30T04:27:00)"), "%FT%T"],
+    [_("Local and Internet time"), "%H:%M @%@"],
     [_("Something sillier"), _("It is %M minutes past hour %H")]
 ];
 
@@ -35,7 +36,7 @@ const ClockOverrideSettings = new GObject.Class({
             this._settings.set_string('override-string', value);
 
             var set_clock_seconds;
-            if ((value.indexOf("%S") !== -1) || (value.indexOf("%-S") !== -1) || (value.indexOf("%r") !== -1) || (value.indexOf("%T") !== -1)) {
+            if ((value.indexOf("%S") !== -1) || (value.indexOf("%-S") !== -1) || (value.indexOf("%r") !== -1) || (value.indexOf("%T") !== -1) || (value.indexOf("%@") !== -1)) {
                 // requested time has seconds in it, so the clock needs to be updated every second
                 set_clock_seconds = true;
             } else {
@@ -118,7 +119,7 @@ const ClockOverrideSettings = new GObject.Class({
         })
 
         let label3 = new Gtk.Label({
-            label: '<a href="http://strftime.org/">' + _("What do all these %x codes mean?") + '</a>',
+            label: '<a href="https://developer.gnome.org/glib/stable/glib-GDateTime.html#g-date-time-format">' + _("What do all these %x codes mean?") + '</a>',
             use_markup: true,
             hexpand: true,
             halign: Gtk.Align.END
