@@ -29,3 +29,7 @@ The make definition file knows all you need to build, distribute, and install (f
 * gnome-shell 3.18 or newer
 * gnome-shell-extension-tool
 * ZIP
+
+## Translations wanted
+
+Please help us translate Clock Override to more languages. You can find translations in the [locale directory](https://github.com/stuartlangridge/gnome-shell-clock-override/tree/master/locale). You can help by adding any missing strings (lines with `msgstr ""`) in your language, or by adding a new language.
