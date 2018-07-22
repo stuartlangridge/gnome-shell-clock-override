@@ -13,3 +13,18 @@ For techies, we use the [`GLib GDateTime` codes](https://developer.gnome.org/gli
  * `%@`, internet time (.beat)
 
 Note that we still try to honour Gnome Shell's clock settings. So if you expect your clock to show seconds (or to update once a second, rather than once a minute) then you'll need to have turned on "show seconds" in Gnome Tweak Tool (under Top Bar) (or [the terminal way](https://askubuntu.com/questions/39412/how-to-show-seconds-on-the-clock-in-gnome-3)).
+
+
+## Building from GitHub
+
+The make definition file knows all you need to build, distribute, and install (for the current user) the extension. 
+
+    make -j [build|clean|dist|distclean|install]
+
+### Dependencies:
+
+* GNU Make
+* glib-compile-schemas
+* gnome-shell 3.18 or newer
+* gnome-shell-extension-tool
+* ZIP
