@@ -23,6 +23,7 @@ The make definition file knows all you need to build, distribute, and install (f
 
 ### Dependencies:
 
+* gettext
 * GNU Make
 * glib-compile-schemas
 * gnome-shell 3.18 or newer

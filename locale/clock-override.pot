@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-20 18:22+0200\n"
+"POT-Creation-Date: 2018-07-23 00:06+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,22 +38,26 @@ msgid "ISO date and time (2014-01-30T04:27:00)"
 msgstr ""
 
 #: prefs.js:24
+msgid "Local and Internet time"
+msgstr ""
+
+#: prefs.js:25
 msgid "Something sillier"
 msgstr ""
 
-#: prefs.js:24
+#: prefs.js:25
 msgid "It is %M minutes past hour %H"
 msgstr ""
 
-#: prefs.js:62
+#: prefs.js:63
 msgid "Text to display instead of the clock"
 msgstr ""
 
-#: prefs.js:75
+#: prefs.js:76
 msgid "Some examples:"
 msgstr ""
 
-#: prefs.js:121
+#: prefs.js:122
 #, javascript-format
 msgid "What do all these %x codes mean?"
 msgstr ""

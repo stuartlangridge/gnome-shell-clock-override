@@ -5,34 +5,56 @@ VERSION=4
 
 PREFIX=$(HOME)/.local/share/gnome-shell/extensions/
 
-distfiles=metadata.json convenience.js extension.js prefs.js \
-          LICENSE schemas/*.compiled schemas/*.gschema.xml
+distfiles=metadata.json convenience.js extension.js prefs.js LICENSE  \
+          $(wildcard schemas/*.gschema.xml) schemas/gschemas.compiled \
+          locale/de/LC_MESSAGES/clock-override.mo \
+          locale/nb/LC_MESSAGES/clock-override.mo
 
+.PHONY: all
 all: build
 
-build: $(distfiles)
+.PHONY: build
+build: locale/clock-override.pot $(distfiles)
 
-metadata.json: Makefile metadata.json.in
-	cp metadata.json.in metadata.json
-	sed -i -e 's:%_NAME_%:$(NAME):g' metadata.json
-	sed -i -e 's:%_UUID_%:$(UUID):g' metadata.json
-	sed -i -e 's:%_VERSION_%:$(VERSION):g' metadata.json
+locale/clock-override.pot: prefs.js
+	xgettext --from-code=UTF-8 -k_ -kN_ -o $@ $?
 
-schemas/%.compiled: schemas/*.gschema.xml
+%.mo: %.po
+	msgfmt $? -o $@
+
+%.po: locale/clock-override.pot
+	msgmerge -U $@ $?
+	@touch $@
+
+metadata.json: metadata.json.in
+	cp $? $@
+	sed -i -e 's:%_NAME_%:$(NAME):g' $@
+	sed -i -e 's:%_UUID_%:$(UUID):g' $@
+	sed -i -e 's:%_VERSION_%:$(VERSION):g' $@
+
+schemas/gschemas.compiled: $(wildcard schemas/*.gschema.xml)
 	glib-compile-schemas --strict schemas/
 
+.PHONY: clean
 clean:
 	-rm metadata.json
+	-rm locale/*/LC_MESSAGES/clock-override.mo
 	-rm schemas/*.compiled
 
-dist: distclean build
+${DISTNAME}.zip: $(distfiles)
 	zip "${DISTNAME}.zip" -r9 ${distfiles}
 
+.PHONY: dist
+dist: ${DISTNAME}.zip
+
+.PHONY: distclean
 distclean:
 	-rm "${DISTNAME}.zip"
 
+.PHONY: install
 install: dist
 	-mkdir -p $(PREFIX)/$(UUID)
+	-rm -rf $(PREFIX)/$(UUID)/*
 	cp "${DISTNAME}.zip" $(PREFIX)/$(UUID)
 	unzip -o "$(PREFIX)/$(UUID)/${DISTNAME}.zip"
 	@rm "${DISTNAME}.zip"
