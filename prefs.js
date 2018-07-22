@@ -15,8 +15,9 @@ const EXAMPLES = [
     ["The time as HH.MM", "%H.%M"],
     ["The time in 24-hour notation (7:30:00 am BST)", "%r"],
     ["A bell", "🔔"],
-    ["A clock", "%f"],
+    ["An analog clock", "%f"],
     ["ISO date and time (2014-01-30T04:27:00)", "%FT%T"],
+    ["Local and Internet time", "%H:%M @%@"],
     ["Something sillier", "It is %M minutes past hour %H"]
 ];
 
@@ -31,7 +32,7 @@ const ClockOverrideSettings = new GObject.Class({
             this._settings.set_string('override-string', value);
 
             var set_clock_seconds;
-            if ((value.indexOf("%S") !== -1) || (value.indexOf("%-S") !== -1) || (value.indexOf("%r") !== -1) || (value.indexOf("%T") !== -1)) {
+            if ((value.indexOf("%S") !== -1) || (value.indexOf("%-S") !== -1) || (value.indexOf("%r") !== -1) || (value.indexOf("%T") !== -1) || (value.indexOf("%@") !== -1)) {
                 // requested time has seconds in it, so the clock needs to be updated every second
                 set_clock_seconds = true;
             } else {
