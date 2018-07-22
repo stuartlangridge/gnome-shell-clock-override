@@ -56,6 +56,5 @@ install: dist
 	-mkdir -p $(PREFIX)/$(UUID)
 	-rm -rf $(PREFIX)/$(UUID)/*
 	cp "${DISTNAME}.zip" $(PREFIX)/$(UUID)
-	unzip -o "$(PREFIX)/$(UUID)/${DISTNAME}.zip"
-	@rm "${DISTNAME}.zip"
+	cd $(PREFIX)/$(UUID) && unzip -o "${DISTNAME}.zip" && rm "${DISTNAME}.zip"
 	-gnome-shell-extension-tool --reload-extension="$(UUID)"
