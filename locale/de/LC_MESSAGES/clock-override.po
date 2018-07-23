@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GNOME Shell Extension Clock Override\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-22 23:45+0200\n"
+"POT-Creation-Date: 2018-07-24 01:21+0200\n"
 "PO-Revision-Date: 2017-05-20 18:26+0200\n"
 "Last-Translator: Jonatan Hatakeyama Zeidler <jonatan_zeidler@gmx.de>\n"
 "Language-Team: Jonatan H. Zeidler\n"
@@ -31,37 +31,44 @@ msgid "A bell"
 msgstr "Eine Glocke"
 
 #: prefs.js:22
-msgid "A clock"
-msgstr "Eine Uhr"
+msgid "An emoji clock face"
+msgstr ""
 
 #: prefs.js:23
+msgid "Slow time (quarters as fractions)"
+msgstr ""
+
+#: prefs.js:24
 msgid "ISO date and time (2014-01-30T04:27:00)"
 msgstr "Datum und Zeit nach ISO (2014-01-30T04:27:00)"
 
-#: prefs.js:24
+#: prefs.js:25
 msgid "Local and Internet time"
 msgstr ""
 
-#: prefs.js:25
+#: prefs.js:26
 msgid "Something sillier"
 msgstr "Etwas dummes"
 
-#: prefs.js:25
+#: prefs.js:26
 msgid "It is %M minutes past hour %H"
 msgstr "Es ist %M Minuten nach %H Uhr"
 
-#: prefs.js:63
+#: prefs.js:64
 msgid "Text to display instead of the clock"
 msgstr "Anzeigetext anstelle der Uhr"
 
-#: prefs.js:76
+#: prefs.js:77
 msgid "Some examples:"
 msgstr "Einige Beispiele:"
 
-#: prefs.js:122
+#: prefs.js:123
 #, javascript-format
 msgid "What do all these %x codes mean?"
 msgstr "Was bedeuten all diese Codes mit %x?"
+
+#~ msgid "A clock"
+#~ msgstr "Eine Uhr"
 
 #~ msgid "What do all these %% codes mean?"
 #~ msgstr "Was bedeuten all diese %%-Codes?"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GNOME Shell Extension Clock Override\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-22 21:39+0200\n"
+"POT-Creation-Date: 2018-07-24 01:21+0200\n"
 "PO-Revision-Date: 2018-07-22 20:57+0000\n"
 "Last-Translator: Daniel Aleksandersen <https://www.daniel.priv.no>\n"
 "Language-Team: Daniel Aleksandersen\n"
@@ -31,34 +31,41 @@ msgid "A bell"
 msgstr "En bjelle"
 
 #: prefs.js:22
-msgid "A clock"
-msgstr "En klokke"
+msgid "An emoji clock face"
+msgstr ""
 
 #: prefs.js:23
+msgid "Slow time (quarters as fractions)"
+msgstr ""
+
+#: prefs.js:24
 msgid "ISO date and time (2014-01-30T04:27:00)"
 msgstr "ISO dato- og tidsformat (2014-01-30T04:27:00)"
 
-#: prefs.js:24
+#: prefs.js:25
 msgid "Local and Internet time"
 msgstr "Lokal og internettid"
 
-#: prefs.js:25
+#: prefs.js:26
 msgid "Something sillier"
 msgstr "Noe litt snålere"
 
-#: prefs.js:25
+#: prefs.js:26
 msgid "It is %M minutes past hour %H"
 msgstr "Klokken er %M minutter over %H"
 
-#: prefs.js:63
+#: prefs.js:64
 msgid "Text to display instead of the clock"
 msgstr "Tekst å vise istedenfor klokken"
 
-#: prefs.js:76
+#: prefs.js:77
 msgid "Some examples:"
 msgstr "Noen eksempler:"
 
-#: prefs.js:122
+#: prefs.js:123
 #, javascript-format
 msgid "What do all these %x codes mean?"
 msgstr "Hva betyr alle disse %x-kodene?"
+
+#~ msgid "A clock"
+#~ msgstr "En klokke"
