@@ -32,11 +32,11 @@ msgstr "En bjelle"
 
 #: prefs.js:22
 msgid "An emoji clock face"
-msgstr ""
+msgstr "En emoji-klokke"
 
 #: prefs.js:23
 msgid "Slow time (quarters as fractions)"
-msgstr ""
+msgstr "Treg tid (kvarater som brøk)"
 
 #: prefs.js:24
 msgid "ISO date and time (2014-01-30T04:27:00)"
@@ -66,6 +66,3 @@ msgstr "Noen eksempler:"
 #, javascript-format
 msgid "What do all these %x codes mean?"
 msgstr "Hva betyr alle disse %x-kodene?"
-
-#~ msgid "A clock"
-#~ msgstr "En klokke"
