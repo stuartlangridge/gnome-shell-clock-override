@@ -19,9 +19,10 @@ const EXAMPLES = [
     [_("The time as HH.MM"), "%H.%M"],
     [_("The time in 24-hour notation (7:30:00 am BST)"), "%r"],
     [_("A bell"), "🔔"],
-    [_("A clock"), "%f"],
+    [_("An emoji clock face"), "%;cf"],
+    [_("Slow time (quarters as fractions)"), "%H %;vf"],
     [_("ISO date and time (2014-01-30T04:27:00)"), "%FT%T"],
-    [_("Local and Internet time"), "%H:%M @%@"],
+    [_("Local and Internet time"), "%H:%M @%;@."],
     [_("Something sillier"), _("It is %M minutes past hour %H")]
 ];
 
