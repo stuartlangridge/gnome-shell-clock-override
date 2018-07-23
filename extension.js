@@ -57,7 +57,7 @@ function overrider(lbl) {
 
         if (FORMAT.indexOf("%;vf") > -1) {
             var quarters = Math.round(now.get_minute() / 15);
-            var vulgar_fraction = ["\u00B9/\u2081", "\u00B9/\u2084", "\u00B9/\u2082", "\u00B3/\u2084"][quarters];
+            var vulgar_fraction = ["\u2070/\u2080", "\u00B9/\u2084", "\u00B9/\u2082", "\u00B3/\u2084", "\u20B9/\u2081"][quarters];
             desired = desired.replace(/%;vf/g, vulgar_fraction);
         }
         if (FORMAT.indexOf("%;cf") > -1) {
