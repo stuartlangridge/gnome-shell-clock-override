@@ -58,7 +58,7 @@ function overrider(lbl) {
         if (FORMAT.indexOf("%;vf") > -1) {
             var quarters = Math.round(now.get_minute() / 15);
             var vulgar_fraction = ["\u00B9/\u2081", "\u00B9/\u2084", "\u00B9/\u2082", "\u00B3/\u2084"][quarters];
-            desired = desired.replace("%;vf", vulgar_fraction);
+            desired = desired.replace(/%;vf/g, vulgar_fraction);
         }
         if (FORMAT.indexOf("%;cf") > -1) {
             var hour = now.get_hour();
@@ -85,7 +85,7 @@ function overrider(lbl) {
         if (FORMAT.indexOf("%;@") > -1) {
             var beat_time = 0 | (((utcnow.get_hour() + 1) % 24) + utcnow.get_minute() / 60 + utcnow.get_second() / 3600) * 1000 / 24;
             beat_time = ('000' + beat_time).slice(-3);
-            desired = desired.replace("%;@", beat_time);
+            desired = desired.replace(/%;@/g, beat_time);
         }
 
         desired = now.format(desired);
