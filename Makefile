@@ -26,8 +26,8 @@ locale/clock-override.pot: prefs.js
 	msgmerge -U $@ $?
 	@touch $@
 
-metadata.json: metadata.json.in
-	cp $? $@
+metadata.json: metadata.json.in Makefile
+	cp $< $@
 	sed -i -e 's:%_NAME_%:$(NAME):g' $@
 	sed -i -e 's:%_UUID_%:$(UUID):g' $@
 	sed -i -e 's:%_VERSION_%:$(VERSION):g' $@
