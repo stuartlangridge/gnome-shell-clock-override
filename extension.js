@@ -55,6 +55,11 @@ function overrider(lbl) {
         var now = GLib.DateTime.new_now_local();
         var utcnow = GLib.DateTime.new_now_utc();
 
+        if (FORMAT.indexOf("%vf") > -1) {
+            var quarters = Math.round(now.get_minute() / 15);
+            var vulgar_fraction = ["\u00B9/\u2081", "\u00B9/\u2084", "\u00B9/\u2082", "\u00B3/\u2084"][quarters];
+            desired = desired.replace("%vf", vulgar_fraction);
+        }
         if (FORMAT.indexOf("%f") > -1) {
             var hour = now.get_hour();
             // convert from 0-23 to 1-12
