@@ -51,7 +51,7 @@ function overrider(lbl) {
     var t = lbl.get_text();
     var FORMAT = settings.get_string("override-string");
     var desired = FORMAT;
-    if (FORMAT.indexOf("%") > -1) {
+    if (FORMAT.indexOf("%;") > -1) {
         var now = GLib.DateTime.new_now_local();
         var utcnow = GLib.DateTime.new_now_utc();
 
