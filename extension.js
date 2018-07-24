@@ -51,8 +51,9 @@ function overrider(lbl) {
     var t = lbl.get_text();
     var FORMAT = settings.get_string("override-string");
     var desired = FORMAT;
+    var now = GLib.DateTime.new_now_local();
+
     if (FORMAT.indexOf("%;") > -1) {
-        var now = GLib.DateTime.new_now_local();
         var bmtnow = GLib.DateTime.new_now(GLib.TimeZone.new('+01'));
 
         if (FORMAT.indexOf("%;vf") > -1) {
@@ -87,7 +88,8 @@ function overrider(lbl) {
             beat_time = ('000' + beat_time).slice(-3);
             desired = desired.replace(/%;@/g, beat_time);
         }
-
+    }
+    if (FORMAT.indexOf("%") > -1) {
         desired = now.format(desired);
     }
     if (t != desired) {
