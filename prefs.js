@@ -37,7 +37,12 @@ const ClockOverrideSettings = new GObject.Class({
             this._settings.set_string('override-string', value);
 
             var set_clock_seconds;
-            if ((value.indexOf("%S") !== -1) || (value.indexOf("%-S") !== -1) || (value.indexOf("%r") !== -1) || (value.indexOf("%T") !== -1) || (value.indexOf("%@") !== -1)) {
+            if ((value.indexOf("%S")  !== -1) ||
+                (value.indexOf("%-S") !== -1) ||
+                (value.indexOf("%r")  !== -1) ||
+                (value.indexOf("%T")  !== -1) ||
+                (value.indexOf("%;@") !== -1))
+            {
                 // requested time has seconds in it, so the clock needs to be updated every second
                 set_clock_seconds = true;
             } else {
