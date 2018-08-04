@@ -16,12 +16,12 @@ function init() {
 }
 
 const EXAMPLES = [
-    [_("The time as HH.MM"), "%H.%M"],
-    [_("The time in 24-hour notation (7:30:00 am BST)"), "%r"],
+    [_("The time in 24-hour notation (14:50)"), "%H:%M"],
+    [_("The time in 12-hour notation with seconds (2:50:10 pm)"), "%r"],
     [_("A bell"), "🔔"],
     [_("An emoji clock face"), "%;cf"],
     [_("Slow time (quarters as fractions)"), "%H %;vf"],
-    [_("ISO date and time (2014-01-30T04:27:00)"), "%FT%T"],
+    [_("ISO date and time (2014-01-30T14:50:10)"), "%FT%T"],
     [_("Local and Internet time"), "%H:%M @%;@."],
     [_("Something sillier"), _("It is %M minutes past hour %H")]
 ];
