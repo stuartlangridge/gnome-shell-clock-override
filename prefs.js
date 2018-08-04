@@ -15,18 +15,6 @@ function init() {
     Convenience.initTranslations("clock-override");
 }
 
-const EXAMPLES = [
-    [_("The time as HH.MM"), "%H.%M"],
-    [_("The time in 24-hour notation (7:30:00 am BST)"), "%r"],
-    [_("A bell"), "🔔"],
-    [_("An emoji clock face"), "%;cf"],
-    [_("Slow time (quarters as fractions)"), "%H %;vf"],
-    [_("ISO date and time (2014-01-30T04:27:00)"), "%FT%T"],
-    [_("Local and Internet time"), "%H:%M @%;@."],
-    [_("Something sillier"), _("It is %M minutes past hour %H")]
-];
-
-
 const ClockOverrideSettings = new GObject.Class({
     Name: 'ClockOverridePrefs',
     Extends: Gtk.Grid,
@@ -37,13 +25,10 @@ const ClockOverrideSettings = new GObject.Class({
             this._settings.set_string('override-string', value);
 
             var set_clock_seconds;
-            if ((value.indexOf("%S") !== -1) || (value.indexOf("%-S") !== -1) || (value.indexOf("%r") !== -1) || (value.indexOf("%T") !== -1) || (value.indexOf("%@") !== -1)) {
-                // requested time has seconds in it, so the clock needs to be updated every second
-                set_clock_seconds = true;
-            } else {
-                // requested time does not have seconds in it, so we can update the clock every minute
-                set_clock_seconds = false;
-            }
+
+            // If requested time has seconds in it, so the clock needs to be updated every second, else can be updated every minute
+            set_clock_seconds = (value.indexOf("%S") !== -1) || (value.indexOf("%-S") !== -1) || (value.indexOf("%r") !== -1) || (value.indexOf("%T") !== -1) || (value.indexOf("%@") !== -1);
+
             Gio.Settings.new("org.gnome.desktop.interface").set_boolean("clock-show-seconds", set_clock_seconds);
         }
     },
@@ -56,7 +41,7 @@ const ClockOverrideSettings = new GObject.Class({
         this.row_spacing = 10;
         this._settings = Convenience.getSettings();
 
-        let label = null
+        let label = null;
         let widget = null;
         let value = null;
 
@@ -86,7 +71,17 @@ const ClockOverrideSettings = new GObject.Class({
 
         var grid = this;
         var rownumber = 2;
-        EXAMPLES.forEach(function(eg) {
+
+        [
+            [_("The time as HH.MM"), "%H.%M"],
+            [_("The time in 24-hour notation (7:30:00 am BST)"), "%r"],
+            [_("A bell"), "🔔"],
+            [_("An emoji clock face"), "%;cf"],
+            [_("Slow time (quarters as fractions)"), "%H %;vf"],
+            [_("ISO date and time (2014-01-30T04:27:00)"), "%FT%T"],
+            [_("Local and Internet time"), "%H:%M @%;@."],
+            [_("Something sillier"), _("It is %M minutes past hour %H")]
+        ].forEach(function(eg) {
             let l = new Gtk.Label({
                 label: '<b>' + eg[0] + '</b>:',
                 use_markup: true,
@@ -99,7 +94,7 @@ const ClockOverrideSettings = new GObject.Class({
             let eb = new Gtk.EventBox({
                 hexpand: true,
                 halign: Gtk.Align.START
-            })
+            });
             let r = new Gtk.Label({
                 label: '<tt>' + eg[1] + '</tt>',
                 use_markup: true,
@@ -117,7 +112,7 @@ const ClockOverrideSettings = new GObject.Class({
             grid.attach(l, 0, rownumber, 1, 1);
             grid.attach(eb, 1, rownumber, 2, 1);
             rownumber += 1;
-        })
+        });
 
         let label3 = new Gtk.Label({
             label: '<a href="https://developer.gnome.org/glib/stable/glib-GDateTime.html#g-date-time-format">' + _("What do all these %x codes mean?") + '</a>',
