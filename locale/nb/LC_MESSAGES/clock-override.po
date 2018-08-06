@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GNOME Shell Extension Clock Override\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-07-24 01:21+0200\n"
-"PO-Revision-Date: 2018-07-22 20:57+0000\n"
+"POT-Creation-Date: 2018-08-06 15:09+0200\n"
+"PO-Revision-Date: 2018-08-06 15:09+0200\n"
 "Last-Translator: Daniel Aleksandersen <https://www.daniel.priv.no>\n"
 "Language-Team: Daniel Aleksandersen\n"
 "Language: nb\n"
@@ -19,12 +19,12 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 
 #: prefs.js:19
-msgid "The time as HH.MM"
-msgstr "Klokken som HH.MM"
+msgid "The time in 24-hour notation (14:50)"
+msgstr "Tiden i 24-timersformat (14:50)"
 
 #: prefs.js:20
-msgid "The time in 24-hour notation (7:30:00 am BST)"
-msgstr "Klokken 24-timersformat (7:30:00 am BST)"
+msgid "The time in 12-hour notation with seconds (2:50:10 pm)"
+msgstr "Tiden i 12-timersformat med sekunder (2:50:10 pm)"
 
 #: prefs.js:21
 msgid "A bell"
@@ -39,8 +39,8 @@ msgid "Slow time (quarters as fractions)"
 msgstr "Treg tid (kvarater som brøk)"
 
 #: prefs.js:24
-msgid "ISO date and time (2014-01-30T04:27:00)"
-msgstr "ISO dato- og tidsformat (2014-01-30T04:27:00)"
+msgid "ISO date and time (2014-01-30T14:50:10)"
+msgstr "ISO dato- og tidsformat (2014-01-30T14:50:10)"
 
 #: prefs.js:25
 msgid "Local and Internet time"
@@ -54,15 +54,16 @@ msgstr "Noe litt snålere"
 msgid "It is %M minutes past hour %H"
 msgstr "Klokken er %M minutter over %H"
 
-#: prefs.js:64
+#: prefs.js:69
 msgid "Text to display instead of the clock"
 msgstr "Tekst å vise istedenfor klokken"
 
-#: prefs.js:77
+#: prefs.js:82
 msgid "Some examples:"
 msgstr "Noen eksempler:"
 
-#: prefs.js:123
+#: prefs.js:128
 #, javascript-format
 msgid "What do all these %x codes mean?"
-msgstr "Hva betyr alle disse %x-kodene?"
+msgstr "Hva betyr disse %x-kodene?"
+
