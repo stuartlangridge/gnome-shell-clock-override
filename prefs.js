@@ -15,6 +15,7 @@ function init() {
     Convenience.initTranslations("clock-override");
 }
 
+
 const ClockOverrideSettings = new GObject.Class({
     Name: 'ClockOverridePrefs',
     Extends: Gtk.Grid,
@@ -24,11 +25,12 @@ const ClockOverrideSettings = new GObject.Class({
         if (sval != value) {
             this._settings.set_string('override-string', value);
 
-            var set_clock_seconds;
-
             // If requested time has seconds in it, so the clock needs to be updated every second, else can be updated every minute
-            set_clock_seconds = (value.indexOf("%S") !== -1) || (value.indexOf("%-S") !== -1) || (value.indexOf("%r") !== -1) || (value.indexOf("%T") !== -1) || (value.indexOf("%@") !== -1);
-
+            var set_clock_seconds = (value.indexOf("%S") !== -1) ||
+                (value.indexOf("%-S") !== -1) ||
+                (value.indexOf("%r") !== -1) ||
+                (value.indexOf("%T") !== -1) ||
+                (value.indexOf("%;@") !== -1);
             Gio.Settings.new("org.gnome.desktop.interface").set_boolean("clock-show-seconds", set_clock_seconds);
         }
     },
@@ -73,12 +75,12 @@ const ClockOverrideSettings = new GObject.Class({
         var rownumber = 2;
 
         [
-            [_("The time as HH.MM"), "%H.%M"],
-            [_("The time in 24-hour notation (7:30:00 am BST)"), "%r"],
+            [_("The time in 24-hour notation (14:50)"), "%H:%M"],
+            [_("The time in 12-hour notation with seconds (2:50:10 pm)"), "%r"],
             [_("A bell"), "🔔"],
             [_("An emoji clock face"), "%;cf"],
             [_("Slow time (quarters as fractions)"), "%H %;vf"],
-            [_("ISO date and time (2014-01-30T04:27:00)"), "%FT%T"],
+            [_("ISO date and time (2014-01-30T14:50:10)"), "%FT%T"],
             [_("Local and Internet time"), "%H:%M @%;@."],
             [_("Something sillier"), _("It is %M minutes past hour %H")]
         ].forEach(function(eg) {
