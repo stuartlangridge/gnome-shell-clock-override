@@ -67,4 +67,5 @@ msgstr "Es ist %M Minuten nach %H Uhr"
 
 #: prefs.js:120
 #, javascript-format
+msgid "What do all these %x codes mean?"
 msgstr "Was bedeuten all diese Codes mit %x?"
