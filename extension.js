@@ -54,8 +54,6 @@ function overrider(lbl) {
     var now = GLib.DateTime.new_now_local();
 
     if (FORMAT.indexOf("%;") > -1) {
-        var bmtnow = GLib.DateTime.new_now(GLib.TimeZone.new('+01'));
-
         if (FORMAT.indexOf("%;vf") > -1) {
             var quarters = Math.round(now.get_minute() / 15);
             var vulgar_fraction = ["\u2070/\u2080", "\u00B9/\u2084", "\u00B9/\u2082", "\u00B3/\u2084", "\u00B9/\u2081"][quarters];
@@ -84,6 +82,7 @@ function overrider(lbl) {
             desired = desired.replace(/%;cf/g, repl);
         }
         if (FORMAT.indexOf("%;@") > -1) {
+            var bmtnow = GLib.DateTime.new_now(GLib.TimeZone.new('+01'));
             var beat_time = 0 | (((bmtnow.get_hour() + 1) % 24) + bmtnow.get_minute() / 60 + bmtnow.get_second() / 3600) * 1000 / 24;
             beat_time = ('000' + beat_time).slice(-3);
             desired = desired.replace(/%;@/g, beat_time);

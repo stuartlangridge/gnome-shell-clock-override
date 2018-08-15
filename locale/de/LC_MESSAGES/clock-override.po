@@ -7,16 +7,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GNOME Shell Extension Clock Override\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-07 21:42+0200\n"
-"PO-Revision-Date: 2017-05-20 18:26+0200\n"
+"POT-Creation-Date: 2017-05-20 18:26+0200\n"
+"PO-Revision-Date: 2018-08-15 18:36+0200\n"
 "Last-Translator: Jonatan Hatakeyama Zeidler <jonatan_zeidler@gmx.de>\n"
-"Language-Team: Jonatan H. Zeidler\n"
+"Language-Team: Jonatan H. Zeidler, Matthäus Brandl\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.1\n"
+"X-Generator: Poedit 2.0.6\n"
 "X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
 
 #: prefs.js:51
 msgid "Text to display instead of the clock"
@@ -28,11 +30,11 @@ msgstr "Einige Beispiele:"
 
 #: prefs.js:78
 msgid "The time in 24-hour notation (14:50)"
-msgstr "Die Zeit in 24-Stunden-Darstellung (7:30:00 am BST)"
+msgstr "Die Zeit in 24-Stunden-Darstellung (14:50)"
 
 #: prefs.js:79
 msgid "The time in 12-hour notation with seconds (2:50:10 pm)"
-msgstr "Die Zeit in 24-Stunden-Darstellung (7:30:00 am BST)"
+msgstr "Die Zeit in 12-Stunden-Darstellung mit Sekunden (2:50:00 pm)"
 
 #: prefs.js:80
 msgid "A bell"
@@ -40,23 +42,24 @@ msgstr "Eine Glocke"
 
 #: prefs.js:81
 msgid "An emoji clock face"
-msgstr ""
+msgstr "Ein Emoji-Ziffernblatt"
 
 #: prefs.js:82
 msgid "Slow time (quarters as fractions)"
-msgstr ""
+msgstr "Slow-Zeit (Viertelstunden als Brüche)"
 
 #: prefs.js:83
 msgid "ISO date and time (2014-01-30T14:50:10)"
-msgstr "Datum und Zeit nach ISO (2014-01-30T04:27:00)"
+msgstr "Datum und Zeit nach ISO (2014-01-30T14:50:10)"
 
 #: prefs.js:84
 msgid "Local and Internet time"
-msgstr ""
+msgstr "Ortszeit und Internetzeit"
 
 #: prefs.js:85
+# In this context silly seems to convey a notion of funny instead of stupid. Hence "albern" instead of "dumm".
 msgid "Something sillier"
-msgstr "Etwas dummes"
+msgstr "Etwas Alberneres"
 
 #: prefs.js:85
 msgid "It is %M minutes past hour %H"
@@ -64,5 +67,4 @@ msgstr "Es ist %M Minuten nach %H Uhr"
 
 #: prefs.js:120
 #, javascript-format
-msgid "What do all these %x codes mean?"
 msgstr "Was bedeuten all diese Codes mit %x?"
