@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-06 15:09+0200\n"
+"POT-Creation-Date: 2018-08-07 21:42+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,51 +17,51 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: prefs.js:19
-msgid "The time in 24-hour notation (14:50)"
-msgstr ""
-
-#: prefs.js:20
-msgid "The time in 12-hour notation with seconds (2:50:10 pm)"
-msgstr ""
-
-#: prefs.js:21
-msgid "A bell"
-msgstr ""
-
-#: prefs.js:22
-msgid "An emoji clock face"
-msgstr ""
-
-#: prefs.js:23
-msgid "Slow time (quarters as fractions)"
-msgstr ""
-
-#: prefs.js:24
-msgid "ISO date and time (2014-01-30T14:50:10)"
-msgstr ""
-
-#: prefs.js:25
-msgid "Local and Internet time"
-msgstr ""
-
-#: prefs.js:26
-msgid "Something sillier"
-msgstr ""
-
-#: prefs.js:26
-msgid "It is %M minutes past hour %H"
-msgstr ""
-
-#: prefs.js:69
+#: prefs.js:51
 msgid "Text to display instead of the clock"
 msgstr ""
 
-#: prefs.js:82
+#: prefs.js:64
 msgid "Some examples:"
 msgstr ""
 
-#: prefs.js:128
+#: prefs.js:78
+msgid "The time in 24-hour notation (14:50)"
+msgstr ""
+
+#: prefs.js:79
+msgid "The time in 12-hour notation with seconds (2:50:10 pm)"
+msgstr ""
+
+#: prefs.js:80
+msgid "A bell"
+msgstr ""
+
+#: prefs.js:81
+msgid "An emoji clock face"
+msgstr ""
+
+#: prefs.js:82
+msgid "Slow time (quarters as fractions)"
+msgstr ""
+
+#: prefs.js:83
+msgid "ISO date and time (2014-01-30T14:50:10)"
+msgstr ""
+
+#: prefs.js:84
+msgid "Local and Internet time"
+msgstr ""
+
+#: prefs.js:85
+msgid "Something sillier"
+msgstr ""
+
+#: prefs.js:85
+msgid "It is %M minutes past hour %H"
+msgstr ""
+
+#: prefs.js:120
 #, javascript-format
 msgid "What do all these %x codes mean?"
 msgstr ""

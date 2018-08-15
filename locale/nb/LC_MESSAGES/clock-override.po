@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GNOME Shell Extension Clock Override\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-06 15:09+0200\n"
+"POT-Creation-Date: 2018-08-07 21:42+0200\n"
 "PO-Revision-Date: 2018-08-06 15:09+0200\n"
 "Last-Translator: Daniel Aleksandersen <https://www.daniel.priv.no>\n"
 "Language-Team: Daniel Aleksandersen\n"
@@ -18,52 +18,51 @@ msgstr ""
 "X-Generator: Poedit 2.0.1\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-#: prefs.js:19
-msgid "The time in 24-hour notation (14:50)"
-msgstr "Tiden i 24-timersformat (14:50)"
-
-#: prefs.js:20
-msgid "The time in 12-hour notation with seconds (2:50:10 pm)"
-msgstr "Tiden i 12-timersformat med sekunder (2:50:10 pm)"
-
-#: prefs.js:21
-msgid "A bell"
-msgstr "En bjelle"
-
-#: prefs.js:22
-msgid "An emoji clock face"
-msgstr "En emoji-klokke"
-
-#: prefs.js:23
-msgid "Slow time (quarters as fractions)"
-msgstr "Treg tid (kvarater som brøk)"
-
-#: prefs.js:24
-msgid "ISO date and time (2014-01-30T14:50:10)"
-msgstr "ISO dato- og tidsformat (2014-01-30T14:50:10)"
-
-#: prefs.js:25
-msgid "Local and Internet time"
-msgstr "Lokal og internettid"
-
-#: prefs.js:26
-msgid "Something sillier"
-msgstr "Noe litt snålere"
-
-#: prefs.js:26
-msgid "It is %M minutes past hour %H"
-msgstr "Klokken er %M minutter over %H"
-
-#: prefs.js:69
+#: prefs.js:51
 msgid "Text to display instead of the clock"
 msgstr "Tekst å vise istedenfor klokken"
 
-#: prefs.js:82
+#: prefs.js:64
 msgid "Some examples:"
 msgstr "Noen eksempler:"
 
-#: prefs.js:128
+#: prefs.js:78
+msgid "The time in 24-hour notation (14:50)"
+msgstr "Tiden i 24-timersformat (14:50)"
+
+#: prefs.js:79
+msgid "The time in 12-hour notation with seconds (2:50:10 pm)"
+msgstr "Tiden i 12-timersformat med sekunder (2:50:10 pm)"
+
+#: prefs.js:80
+msgid "A bell"
+msgstr "En bjelle"
+
+#: prefs.js:81
+msgid "An emoji clock face"
+msgstr "En emoji-klokke"
+
+#: prefs.js:82
+msgid "Slow time (quarters as fractions)"
+msgstr "Treg tid (kvarater som brøk)"
+
+#: prefs.js:83
+msgid "ISO date and time (2014-01-30T14:50:10)"
+msgstr "ISO dato- og tidsformat (2014-01-30T14:50:10)"
+
+#: prefs.js:84
+msgid "Local and Internet time"
+msgstr "Lokal og internettid"
+
+#: prefs.js:85
+msgid "Something sillier"
+msgstr "Noe litt snålere"
+
+#: prefs.js:85
+msgid "It is %M minutes past hour %H"
+msgstr "Klokken er %M minutter over %H"
+
+#: prefs.js:120
 #, javascript-format
 msgid "What do all these %x codes mean?"
 msgstr "Hva betyr disse %x-kodene?"
-
