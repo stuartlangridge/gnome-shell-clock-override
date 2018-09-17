@@ -1,7 +1,7 @@
 NAME=Clock Override
 DISTNAME=clock-override
 UUID=clock-override@gnomeshell.kryogenix.org
-VERSION=9
+VERSION=10
 
 PREFIX=$(HOME)/.local/share/gnome-shell/extensions/
 
