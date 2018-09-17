@@ -54,6 +54,9 @@ function overrider(lbl) {
     var now = GLib.DateTime.new_now_local();
 
     if (FORMAT.indexOf("%;") > -1) {
+	if (FORMAT.indexOf("%;tf") > -1) {
+    	    desired = desired.replace(/%;tf/g, '\t');
+	}
         if (FORMAT.indexOf("%;vf") > -1) {
             var quarters = Math.round(now.get_minute() / 15);
             var vulgar_fraction = ["\u2070/\u2080", "\u00B9/\u2084", "\u00B9/\u2082", "\u00B3/\u2084", "\u00B9/\u2081"][quarters];
