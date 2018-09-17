@@ -83,7 +83,7 @@ function overrider(lbl) {
         }
         if (FORMAT.indexOf("%;@") > -1) {
             var bmtnow = GLib.DateTime.new_now(GLib.TimeZone.new('+01'));
-            var beat_time = 0 | (((bmtnow.get_hour() + 1) % 24) + bmtnow.get_minute() / 60 + bmtnow.get_second() / 3600) * 1000 / 24;
+            var beat_time = 0 | (bmtnow.get_hour() + (bmtnow.get_minute() / 60) + bmtnow.get_second() / 3600) * 1000 / 24;
             beat_time = ('000' + beat_time).slice(-3);
             desired = desired.replace(/%;@/g, beat_time);
         }
