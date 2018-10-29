@@ -59,7 +59,7 @@ msgstr "Algo mais bobo"
 
 #: prefs.js:85
 msgid "It is %M minutes past hour %H"
-msgstr "São %M minutos para as %H"
+msgstr "São %M minutos depois das %H"
 
 #: prefs.js:120
 #, javascript-format
