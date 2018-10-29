@@ -1,0 +1,67 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GNOME Shell Extension Clock Override\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-15 18:48+0200\n"
+"PO-Revision-Date: 2018-10-29 04:00+0000\n"
+"Last-Translator: Isabelle Porto\n"
+"Language-Team: Isabelle Porto\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: prefs.js:51
+msgid "Text to display instead of the clock"
+msgstr "Texto a ser mostrado no lugar do relógio"
+
+#: prefs.js:64
+msgid "Some examples:"
+msgstr "Alguns exemplos:"
+
+#: prefs.js:78
+msgid "The time in 24-hour notation (14:50)"
+msgstr "Horário na notação de 24 horas (14:50)"
+
+#: prefs.js:79
+msgid "The time in 12-hour notation with seconds (2:50:10 pm)"
+msgstr "Horário com os segundos, na notação de 12 horas (2:50:10 pm)"
+
+#: prefs.js:80
+msgid "A bell"
+msgstr "Um sino"
+
+#: prefs.js:81
+msgid "An emoji clock face"
+msgstr "Um emoji de relógio"
+
+#: prefs.js:82
+msgid "Slow time (quarters as fractions)"
+msgstr "Tempo lento (quartos como frações)"
+
+#: prefs.js:83
+msgid "ISO date and time (2014-01-30T14:50:10)"
+msgstr "Data e hora no formato ISO (2014-01-30T14:50:10)"
+
+#: prefs.js:84
+msgid "Local and Internet time"
+msgstr "Horário local e da Internet"
+
+#: prefs.js:85
+msgid "Something sillier"
+msgstr "Algo mais bobo"
+
+#: prefs.js:85
+msgid "It is %M minutes past hour %H"
+msgstr "São %M minutos para as %H"
+
+#: prefs.js:120
+#, javascript-format
+msgid "What do all these %x codes mean?"
+msgstr "O que todos esses códigos %x significam?"
