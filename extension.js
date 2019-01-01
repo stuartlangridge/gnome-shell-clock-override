@@ -4,7 +4,7 @@ const GLib = imports.gi.GLib;
 const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
 const Convenience = Me.imports.convenience;
-const Format = Me.imports.format;
+const Format = Me.imports.formatter;
 
 var settings;
 
