@@ -1,0 +1,9 @@
+{
+	"options": [
+		"--verbose"
+	],
+
+	"include_paths" : "..",
+
+	"spec_files": "."
+}
