@@ -5,7 +5,7 @@ VERSION=10
 
 PREFIX=$(HOME)/.local/share/gnome-shell/extensions/
 
-distfiles=metadata.json convenience.js extension.js prefs.js LICENSE  \
+distfiles=metadata.json convenience.js extension.js format.js prefs.js LICENSE  \
           $(wildcard schemas/*.gschema.xml) schemas/gschemas.compiled \
           locale/de/LC_MESSAGES/clock-override.mo \
           locale/nb/LC_MESSAGES/clock-override.mo \
