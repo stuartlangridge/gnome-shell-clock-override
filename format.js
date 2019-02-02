@@ -73,6 +73,28 @@ function format(FORMAT, now) {
             beat_time = ('000' + beat_time).slice(-3);
             desired = desired.replace(/%;@/g, beat_time);
         }
+        if (FORMAT.indexOf("%;A") > -1) {
+            txt = /%;\A\((\d+|(%.+))+( )?[+-\/*]( )?(\d+|(%.+))\)/.exec(desired);
+            formatted = txt.toString().replace("%;A(", "").slice(0, -1);
+            if (formatted.indexOf("%") > -1) {
+                formatted = now.format(formatted);
+            }
+            formatted1 = formatted;
+            sign = /[+-\/*]/.exec(formatted1);
+            n1 = parseFloat(/\d+/.exec(formatted1));
+            formatted1 = formatted1.replace(n1.toString(), "");
+            n2 = parseFloat(/\d+/.exec(formatted1));
+            if (sign == "+") {
+                formatted = formatted.replace(formatted, (n1 + n2).toString());
+            } else if (sign == "-") {
+                formatted = formatted.replace(formatted, (n1 - n2).toString());
+            } else if (sign == "/") {
+                formatted = formatted.replace(formatted, (n1 / n2).toString());
+            } else if (sign == "*") {
+                formatted = formatted.replace(formatted, (n1 * n2).toString());
+            }
+            desired = desired.replace(txt[0], formatted);
+        }
     }
     if (FORMAT.indexOf("%") > -1) {
         desired = now.format(desired);

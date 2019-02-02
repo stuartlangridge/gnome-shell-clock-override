@@ -82,7 +82,8 @@ const ClockOverrideSettings = new GObject.Class({
             [_("Slow time (quarters as fractions)"), "%H %;vf"],
             [_("ISO date and time (2014-01-30T14:50:10)"), "%FT%T"],
             [_("Local and Internet time"), "%H:%M @%;@."],
-            [_("Something sillier"), _("It is %M minutes past hour %H")]
+            [_("Something sillier"), _("It is %M minutes past hour %H")],
+            [_("Basic arithmetic with numbers or codes"), _("%;A(n[+ - / *]n), example %;A(10000 + %Y)")]
         ].forEach(function(eg) {
             let l = new Gtk.Label({
                 label: '<b>' + eg[0] + '</b>:',
