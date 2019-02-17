@@ -46,8 +46,18 @@ function format(FORMAT, now) {
             desired = desired.replace(/%;vf/g, vulgar_fraction);
         }
         if (FORMAT.indexOf("%;nf") > -1) {
-            var hour = now.get_hour();
             var quarters = Math.round(now.get_minute() / 15);
+            
+            var hour = now.get_hour();
+            
+            // convert from 0-23 to 1-12
+            if (hour > 12) {
+                hour -= 12;
+            }
+            if (hour == 0) {
+                hour = 12;
+            }
+            
             // convert from 0-23 to 1-12
             var next_hour = hour + 1;
             if (next_hour > 12) {

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-17 12:14+0100\n"
+"POT-Creation-Date: 2019-02-17 13:13+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,71 +17,71 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: format.js:61
+#: format.js:71
 msgid "one"
 msgstr ""
 
-#: format.js:62
+#: format.js:72
 msgid "two"
 msgstr ""
 
-#: format.js:63
+#: format.js:73
 msgid "three"
 msgstr ""
 
-#: format.js:64
+#: format.js:74
 msgid "four"
 msgstr ""
 
-#: format.js:65
+#: format.js:75
 msgid "five"
 msgstr ""
 
-#: format.js:66
+#: format.js:76
 msgid "six"
 msgstr ""
 
-#: format.js:67
+#: format.js:77
 msgid "seven"
 msgstr ""
 
-#: format.js:68
+#: format.js:78
 msgid "eight"
 msgstr ""
 
-#: format.js:69
+#: format.js:79
 msgid "nine"
 msgstr ""
 
-#: format.js:70
+#: format.js:80
 msgid "ten"
 msgstr ""
 
-#: format.js:71
+#: format.js:81
 msgid "eleven"
 msgstr ""
 
-#: format.js:72
+#: format.js:82
 msgid "twelve"
 msgstr ""
 
-#: format.js:75
+#: format.js:85
 msgid "%;naturalI o'clock"
 msgstr ""
 
-#: format.js:76
+#: format.js:86
 msgid "quarter past %;naturalI"
 msgstr ""
 
-#: format.js:77
+#: format.js:87
 msgid "half past %;naturalI"
 msgstr ""
 
-#: format.js:78
+#: format.js:88
 msgid "quarter to %;nextNaturalI"
 msgstr ""
 
-#: format.js:79
+#: format.js:89
 msgid "%;nextNaturalI o'clock"
 msgstr ""
 
