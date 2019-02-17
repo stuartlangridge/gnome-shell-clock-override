@@ -17,24 +17,72 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: format.js:53
-msgid "%H o'clock"
+#: format.js:61
+msgid "one"
 msgstr ""
 
-#: format.js:54
-msgid "quarter past %H"
+#: format.js:62
+msgid "two"
 msgstr ""
 
-#: format.js:55
-msgid "half past %H"
+#: format.js:63
+msgid "three"
 msgstr ""
 
-#: format.js:56
-msgid "quarter to %;nH"
+#: format.js:64
+msgid "four"
 msgstr ""
 
-#: format.js:57
-msgid "%;nH o'clock"
+#: format.js:65
+msgid "five"
+msgstr ""
+
+#: format.js:66
+msgid "six"
+msgstr ""
+
+#: format.js:67
+msgid "seven"
+msgstr ""
+
+#: format.js:68
+msgid "eight"
+msgstr ""
+
+#: format.js:69
+msgid "nine"
+msgstr ""
+
+#: format.js:70
+msgid "ten"
+msgstr ""
+
+#: format.js:71
+msgid "eleven"
+msgstr ""
+
+#: format.js:72
+msgid "twelve"
+msgstr ""
+
+#: format.js:75
+msgid "%;naturalI o'clock"
+msgstr ""
+
+#: format.js:76
+msgid "quarter past %;naturalI"
+msgstr ""
+
+#: format.js:77
+msgid "half past %;naturalI"
+msgstr ""
+
+#: format.js:78
+msgid "quarter to %;nextNaturalI"
+msgstr ""
+
+#: format.js:79
+msgid "%;nextNaturalI o'clock"
 msgstr ""
 
 #: prefs.js:51
