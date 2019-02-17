@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GNOME Shell Extension Clock Override\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-20 18:26+0200\n"
+"POT-Creation-Date: 2019-02-17 12:14+0100\n"
 "PO-Revision-Date: 2018-08-15 18:36+0200\n"
 "Last-Translator: Jonatan Hatakeyama Zeidler <jonatan_zeidler@gmx.de>\n"
 "Language-Team: Jonatan H. Zeidler, Matthäus Brandl\n"
@@ -19,6 +19,25 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: format.js:53
+msgid "%H o'clock"
+msgstr ""
+
+#: format.js:54
+msgid "quarter past %H"
+msgstr ""
+
+#: format.js:55
+msgid "half past %H"
+msgstr ""
+
+#: format.js:56
+msgid "quarter to %;nH"
+msgstr ""
+
+#: format.js:57
+msgid "%;nH o'clock"
+msgstr ""
 
 #: prefs.js:51
 msgid "Text to display instead of the clock"
@@ -49,23 +68,27 @@ msgid "Slow time (quarters as fractions)"
 msgstr "Slow-Zeit (Viertelstunden als Brüche)"
 
 #: prefs.js:83
+msgid "Slow time (quarters in natural language)"
+msgstr ""
+
+#: prefs.js:84
 msgid "ISO date and time (2014-01-30T14:50:10)"
 msgstr "Datum und Zeit nach ISO (2014-01-30T14:50:10)"
 
-#: prefs.js:84
+#: prefs.js:85
 msgid "Local and Internet time"
 msgstr "Ortszeit und Internetzeit"
 
-#: prefs.js:85
 # In this context silly seems to convey a notion of funny instead of stupid. Hence "albern" instead of "dumm".
+#: prefs.js:86
 msgid "Something sillier"
 msgstr "Etwas Alberneres"
 
-#: prefs.js:85
+#: prefs.js:86
 msgid "It is %M minutes past hour %H"
 msgstr "Es ist %M Minuten nach %H Uhr"
 
-#: prefs.js:120
+#: prefs.js:121
 #, javascript-format
 msgid "What do all these %x codes mean?"
 msgstr "Was bedeuten all diese Codes mit %x?"

@@ -45,6 +45,20 @@ function format(FORMAT, now) {
             var vulgar_fraction = ["\u2070/\u2080", "\u00B9/\u2084", "\u00B9/\u2082", "\u00B3/\u2084", "\u00B9/\u2081"][quarters];
             desired = desired.replace(/%;vf/g, vulgar_fraction);
         }
+        if (FORMAT.indexOf("%;nf") > -1) {
+            var hour = now.get_hour();
+            var quarters = Math.round(now.get_minute() / 15);
+            
+            var natural_language = [
+                _("%H o'clock"),
+                _("quarter past %H"),
+                _("half past %H"),
+                _("quarter to %;nH"),
+                _("%;nH o'clock")
+            ][quarters];
+            natural_language = natural_language.replace(/%;nH/, hour + 1);
+            desired = desired.replace(/%;nf/g, natural_language);
+        }
         if (FORMAT.indexOf("%;cf") > -1) {
             var hour = now.get_hour();
             // convert from 0-23 to 1-12
