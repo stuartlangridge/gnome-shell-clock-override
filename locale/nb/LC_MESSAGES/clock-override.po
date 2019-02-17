@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GNOME Shell Extension Clock Override\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-07 21:42+0200\n"
+"POT-Creation-Date: 2019-02-17 13:13+0100\n"
 "PO-Revision-Date: 2018-08-06 15:09+0200\n"
 "Last-Translator: Daniel Aleksandersen <https://www.daniel.priv.no>\n"
 "Language-Team: Daniel Aleksandersen\n"
@@ -17,6 +17,74 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.0.1\n"
 "X-Poedit-SourceCharset: UTF-8\n"
+
+#: format.js:71
+msgid "one"
+msgstr ""
+
+#: format.js:72
+msgid "two"
+msgstr ""
+
+#: format.js:73
+msgid "three"
+msgstr ""
+
+#: format.js:74
+msgid "four"
+msgstr ""
+
+#: format.js:75
+msgid "five"
+msgstr ""
+
+#: format.js:76
+msgid "six"
+msgstr ""
+
+#: format.js:77
+msgid "seven"
+msgstr ""
+
+#: format.js:78
+msgid "eight"
+msgstr ""
+
+#: format.js:79
+msgid "nine"
+msgstr ""
+
+#: format.js:80
+msgid "ten"
+msgstr ""
+
+#: format.js:81
+msgid "eleven"
+msgstr ""
+
+#: format.js:82
+msgid "twelve"
+msgstr ""
+
+#: format.js:85
+msgid "%;naturalI o'clock"
+msgstr ""
+
+#: format.js:86
+msgid "quarter past %;naturalI"
+msgstr ""
+
+#: format.js:87
+msgid "half past %;naturalI"
+msgstr ""
+
+#: format.js:88
+msgid "quarter to %;nextNaturalI"
+msgstr ""
+
+#: format.js:89
+msgid "%;nextNaturalI o'clock"
+msgstr ""
 
 #: prefs.js:51
 msgid "Text to display instead of the clock"
@@ -47,22 +115,26 @@ msgid "Slow time (quarters as fractions)"
 msgstr "Treg tid (kvarater som brøk)"
 
 #: prefs.js:83
+msgid "Slow time (quarters in natural language)"
+msgstr ""
+
+#: prefs.js:84
 msgid "ISO date and time (2014-01-30T14:50:10)"
 msgstr "ISO dato- og tidsformat (2014-01-30T14:50:10)"
 
-#: prefs.js:84
+#: prefs.js:85
 msgid "Local and Internet time"
 msgstr "Lokal og internettid"
 
-#: prefs.js:85
+#: prefs.js:86
 msgid "Something sillier"
 msgstr "Noe litt snålere"
 
-#: prefs.js:85
+#: prefs.js:86
 msgid "It is %M minutes past hour %H"
 msgstr "Klokken er %M minutter over %H"
 
-#: prefs.js:120
+#: prefs.js:121
 #, javascript-format
 msgid "What do all these %x codes mean?"
 msgstr "Hva betyr disse %x-kodene?"

@@ -20,7 +20,7 @@ all: build
 .PHONY: build
 build: locale/clock-override.pot $(distfiles)
 
-locale/clock-override.pot: prefs.js
+locale/clock-override.pot: format.js prefs.js
 	xgettext --from-code=UTF-8 -k_ -kN_ -o $@ $?
 
 %.mo: %.po

@@ -80,6 +80,7 @@ const ClockOverrideSettings = new GObject.Class({
             [_("A bell"), "🔔"],
             [_("An emoji clock face"), "%;cf"],
             [_("Slow time (quarters as fractions)"), "%H %;vf"],
+            [_("Slow time (quarters in natural language)"), "%;nf"],
             [_("ISO date and time (2014-01-30T14:50:10)"), "%FT%T"],
             [_("Local and Internet time"), "%H:%M @%;@."],
             [_("Something sillier"), _("It is %M minutes past hour %H")]

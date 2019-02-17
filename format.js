@@ -45,6 +45,53 @@ function format(FORMAT, now) {
             var vulgar_fraction = ["\u2070/\u2080", "\u00B9/\u2084", "\u00B9/\u2082", "\u00B3/\u2084", "\u00B9/\u2081"][quarters];
             desired = desired.replace(/%;vf/g, vulgar_fraction);
         }
+        if (FORMAT.indexOf("%;nf") > -1) {
+            var quarters = Math.round(now.get_minute() / 15);
+            
+            var hour = now.get_hour();
+            
+            // convert from 0-23 to 1-12
+            if (hour > 12) {
+                hour -= 12;
+            }
+            if (hour == 0) {
+                hour = 12;
+            }
+            
+            // convert from 0-23 to 1-12
+            var next_hour = hour + 1;
+            if (next_hour > 12) {
+                next_hour -= 12;
+            }
+            if (next_hour == 0) {
+                next_hour = 12;
+            }
+            
+            var natural_hours = [
+                _("one"),
+                _("two"),
+                _("three"),
+                _("four"),
+                _("five"),
+                _("six"),
+                _("seven"),
+                _("eight"),
+                _("nine"),
+                _("ten"),
+                _("eleven"),
+                _("twelve")
+            ];
+            var natural_language = [
+                _("%;naturalI o'clock"),
+                _("quarter past %;naturalI"),
+                _("half past %;naturalI"),
+                _("quarter to %;nextNaturalI"),
+                _("%;nextNaturalI o'clock")
+            ][quarters];
+            natural_language = natural_language.replace(/%;naturalI/, natural_hours[hour-1]);
+            natural_language = natural_language.replace(/%;nextNaturalI/, natural_hours[next_hour-1]);
+            desired = desired.replace(/%;nf/g, natural_language);
+        }
         if (FORMAT.indexOf("%;cf") > -1) {
             var hour = now.get_hour();
             // convert from 0-23 to 1-12
