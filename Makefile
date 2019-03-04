@@ -8,8 +8,11 @@ PREFIX=$(HOME)/.local/share/gnome-shell/extensions/
 distfiles=metadata.json convenience.js extension.js formatter.js prefs.js LICENSE  \
           $(wildcard schemas/*.gschema.xml) schemas/gschemas.compiled \
           locale/de/LC_MESSAGES/clock-override.mo \
+          locale/es/LC_MESSAGES/clock-override.mo \
+          locale/fr/LC_MESSAGES/clock-override.mo \
           locale/nb/LC_MESSAGES/clock-override.mo \
-          locale/es/LC_MESSAGES/clock-override.mo
+          locale/pt/LC_MESSAGES/clock-override.mo
+
 
 .PHONY: all
 all: build
