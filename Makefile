@@ -59,3 +59,7 @@ install: dist
 	cp "${DISTNAME}.zip" $(PREFIX)/$(UUID)
 	cd $(PREFIX)/$(UUID) && unzip -o "${DISTNAME}.zip" && rm "${DISTNAME}.zip"
 	-gnome-shell-extension-tool --reload-extension="$(UUID)"
+
+.PHONY: test
+test:
+	jasmine --config test/terse.json

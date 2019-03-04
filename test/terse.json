@@ -1,0 +1,8 @@
+{
+	"options": [
+	],
+
+	"include_paths" : "..",
+
+	"spec_files": "."
+}
