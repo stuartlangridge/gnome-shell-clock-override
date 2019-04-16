@@ -5,7 +5,7 @@ VERSION=10
 
 PREFIX=$(HOME)/.local/share/gnome-shell/extensions/
 
-distfiles=metadata.json convenience.js extension.js format.js prefs.js LICENSE  \
+distfiles=metadata.json convenience.js extension.js formatter.js prefs.js LICENSE  \
           $(wildcard schemas/*.gschema.xml) schemas/gschemas.compiled \
           locale/de/LC_MESSAGES/clock-override.mo \
           locale/es/LC_MESSAGES/clock-override.mo \
@@ -62,3 +62,7 @@ install: dist
 	cp "${DISTNAME}.zip" $(PREFIX)/$(UUID)
 	cd $(PREFIX)/$(UUID) && unzip -o "${DISTNAME}.zip" && rm "${DISTNAME}.zip"
 	-gnome-shell-extension-tool --reload-extension="$(UUID)"
+
+.PHONY: test
+test:
+	jasmine --config test/terse.json
