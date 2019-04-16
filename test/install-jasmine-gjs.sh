@@ -2,9 +2,8 @@
 set -ex
 
 tempdir=`mktemp --directory --tmpdir install-jasmin.XXXXXXXXXX`
+git clone https://github.com/ptomato/jasmine-gjs $tempdir
 cd $tempdir
-git clone https://github.com/ptomato/jasmine-gjs 
-cd jasmine-gjs
 ./autogen.sh
 make
 sudo make install
