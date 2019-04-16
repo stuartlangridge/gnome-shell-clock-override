@@ -20,7 +20,7 @@ Note that we still try to honour Gnome Shell's clock settings. So if you expect 
 
 The make definition file knows all you need to build, distribute, and install (for the current user) the extension. 
 
-    make -j [build|clean|dist|distclean|install]
+    make -j [build|clean|dist|distclean|install|test]
 
 ### Dependencies:
 
