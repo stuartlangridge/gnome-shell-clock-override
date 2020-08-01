@@ -35,6 +35,8 @@ function enable() {
         print("Looks like Shell has changed where things live again; aborting.");
         return;
     }
+    
+    sA.dateMenu.actor.set_style("text-align: center;");
 
     sA.dateMenu.actor.first_child.get_children().forEach(function(w) {
         // assume that the text label is the first StLabel we find.
