@@ -15,7 +15,7 @@ For techies, we use the [`GLib GDateTime` codes](https://developer.gnome.org/gli
  * `%n`, line breaks
  * `%;l`, same as %l but without being preceded by a blank
  * `%;e`, same as %e but without being preceded by a blank
- * `%;m`, same as %m but without being preceded by a blank
+ * `%;m`, same as %m but range from 1 to 12 instead of 01 to 12
 
 Note that we still try to honour Gnome Shell's clock settings. So if you expect your clock to show seconds (or to update once a second, rather than once a minute) then you'll need to have turned on "show seconds" in Gnome Tweak Tool (under Top Bar) (or [the terminal way](https://askubuntu.com/questions/39412/how-to-show-seconds-on-the-clock-in-gnome-3)).
 
