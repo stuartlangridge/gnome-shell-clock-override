@@ -67,6 +67,27 @@ function format(FORMAT, now) {
             }
             desired = desired.replace(/%;cf/g, repl);
         }
+        if (FORMAT.indexOf("%;l") > -1) {
+            var hour = now.get_hour();
+            // convert from 0-23 to 1-12
+            if (hour > 12) {
+                hour -= 12;
+            }
+            if (hour == 0) {
+                hour = 12;
+            }
+            desired = desired.replace(/%;l/g, hour);
+        }
+        if (FORMAT.indexOf("%;e") > -1) {
+            var day = now.get_day_of_month();
+
+            desired = desired.replace(/%;e/g, day);
+        }
+        if (FORMAT.indexOf("%;m") > -1) {
+            var month = now.get_month();
+
+            desired = desired.replace(/%;m/g, month);
+        }
         if (FORMAT.indexOf("%;@") > -1) {
             var bmtnow = now.to_timezone(GLib.TimeZone.new('+01'));
             var beat_time = 0 | (bmtnow.get_hour() + (bmtnow.get_minute() / 60) + bmtnow.get_second() / 3600) * 1000 / 24;
