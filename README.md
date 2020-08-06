@@ -7,12 +7,15 @@ Gnome Shell doesn't permit many changes to the format of its clock; in particula
 
 ![Extension screenshot](assets/screenshot.png)
 
-For techies, we use the [`GLib GDateTime` codes](https://developer.gnome.org/glib/stable/glib-GDateTime.html#g-date-time-format) to specify actual times in your clock string, with three additions:
+For techies, we use the [`GLib GDateTime` codes](https://developer.gnome.org/glib/stable/glib-GDateTime.html#g-date-time-format) to specify actual times in your clock string, with seven additions:
 
  * `%;cf`, a little emoji Unicode clock face (thanks to [dsboger](https://github.com/stuartlangridge/gnome-shell-clock-override/commit/5941974a39d3dfa4f7adb227bdbe3bc50118bbc9) for that!)
  * `%;vf`, quarters as vulgar fractions
  * `%;@`, internet time (.beat)
  * `%n`, line breaks
+ * `%;l`, same as %l but without being preceded by a blank
+ * `%;e`, same as %e but without being preceded by a blank
+ * `%;m`, same as %m but range from 1 to 12 instead of 01 to 12
 
 Note that we still try to honour Gnome Shell's clock settings. So if you expect your clock to show seconds (or to update once a second, rather than once a minute) then you'll need to have turned on "show seconds" in Gnome Tweak Tool (under Top Bar) (or [the terminal way](https://askubuntu.com/questions/39412/how-to-show-seconds-on-the-clock-in-gnome-3)).
 
