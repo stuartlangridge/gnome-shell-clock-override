@@ -36,47 +36,77 @@ var fromCodePoint = function() {
     return result;
 };
 
+function formatVulgarFraction(FORMAT, desired, now) {
+    if (FORMAT.indexOf("%;vf") < 0) {
+        return desired;
+    }
+
+    var quarters = Math.round(now.get_minute() / 15);
+    var vulgar_fraction = ["\u2070/\u2080", "\u00B9/\u2084", "\u00B9/\u2082", "\u00B3/\u2084", "\u00B9/\u2081"][quarters];
+    return desired.replace(/%;vf/g, vulgar_fraction);
+}
+
+function formatClockFace(FORMAT, desired, now) {
+    if (FORMAT.indexOf("%;cf") < 0) {
+        return desired;
+    }
+
+    var hour = now.get_hour();
+    // convert from 0-23 to 1-12
+    if (hour > 12) {
+        hour -= 12;
+    }
+    if (hour == 0) {
+        hour = 12;
+    }
+    var clockFaceCodePoint = 0x1f550 + (hour - 1);
+    var minute = now.get_minute();
+    if (minute >= 30) {
+        clockFaceCodePoint += 12;
+    }
+    var repl;
+    if (String.fromCodePoint) {
+        repl = String.fromCodePoint(clockFaceCodePoint)
+    } else {
+        repl = fromCodePoint(clockFaceCodePoint);
+    }
+    return desired.replace(/%;cf/g, repl);
+}
+
+function formatBeatTime(FORMAT, desired, now) {
+    if (FORMAT.indexOf("%;@") < 0) {
+        return desired;
+    }
+
+    var bmtnow = now.to_timezone(GLib.TimeZone.new('+01'));
+    var beat_time = 0 | (bmtnow.get_hour() + (bmtnow.get_minute() / 60) + bmtnow.get_second() / 3600) * 1000 / 24;
+    beat_time = ('000' + beat_time).slice(-3);
+    return desired.replace(/%;@/g, beat_time);
+}
+
+function formatCustom(FORMAT, desired, now) {
+    if (FORMAT.indexOf("%;") < 0) {
+        return desired;
+    }
+    
+    desired = formatVulgarFraction(FORMAT, desired, now);
+    desired = formatClockFace(FORMAT, desired, now);
+    return formatBeatTime(FORMAT, desired, now);
+}
+
+function formatUsingGlib(desired, now) {
+    if (desired.indexOf("%") < 0) {
+        return desired;
+    }
+    
+    return now.format(desired);
+}
+
 function format(FORMAT, now) {
     var desired = FORMAT;
 
-    if (FORMAT.indexOf("%;") > -1) {
-        if (FORMAT.indexOf("%;vf") > -1) {
-            var quarters = Math.round(now.get_minute() / 15);
-            var vulgar_fraction = ["\u2070/\u2080", "\u00B9/\u2084", "\u00B9/\u2082", "\u00B3/\u2084", "\u00B9/\u2081"][quarters];
-            desired = desired.replace(/%;vf/g, vulgar_fraction);
-        }
-        if (FORMAT.indexOf("%;cf") > -1) {
-            var hour = now.get_hour();
-            // convert from 0-23 to 1-12
-            if (hour > 12) {
-                hour -= 12;
-            }
-            if (hour == 0) {
-                hour = 12;
-            }
-            var clockFaceCodePoint = 0x1f550 + (hour - 1);
-            var minute = now.get_minute();
-            if (minute >= 30) {
-                clockFaceCodePoint += 12;
-            }
-            var repl;
-            if (String.fromCodePoint) {
-                repl = String.fromCodePoint(clockFaceCodePoint)
-            } else {
-                repl = fromCodePoint(clockFaceCodePoint);
-            }
-            desired = desired.replace(/%;cf/g, repl);
-        }
-        if (FORMAT.indexOf("%;@") > -1) {
-            var bmtnow = now.to_timezone(GLib.TimeZone.new('+01'));
-            var beat_time = 0 | (bmtnow.get_hour() + (bmtnow.get_minute() / 60) + bmtnow.get_second() / 3600) * 1000 / 24;
-            beat_time = ('000' + beat_time).slice(-3);
-            desired = desired.replace(/%;@/g, beat_time);
-        }
-    }
-    if (FORMAT.indexOf("%") > -1) {
-        desired = now.format(desired);
-    }
+    desired = formatCustom(FORMAT, desired, now);
+    desired = formatUsingGlib(desired, now);
 
     return desired;
 };
