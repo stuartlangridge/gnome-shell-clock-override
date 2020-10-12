@@ -36,34 +36,52 @@ var fromCodePoint = function() {
     return result;
 };
 
+function roundMinutesForDenominator(now, denominator) {
+    return Math.round(now.get_minute() / denominator);
+}
+
 function formatVulgarFraction(FORMAT, desired, now) {
+    function roundToQuarters(now) {
+        return roundMinutesForDenominator(now, 15);
+    }
+
     if (FORMAT.indexOf("%;vf") < 0) {
         return desired;
     }
 
-    var quarters = Math.round(now.get_minute() / 15);
+    var quarters = roundToQuarters(now);
     var vulgar_fraction = ["\u2070/\u2080", "\u00B9/\u2084", "\u00B9/\u2082", "\u00B3/\u2084", "\u00B9/\u2081"][quarters];
     return desired.replace(/%;vf/g, vulgar_fraction);
 }
 
 function formatClockFace(FORMAT, desired, now) {
+    function roundToHalves(now) {
+        return roundMinutesForDenominator(now, 30);
+    }
+
     if (FORMAT.indexOf("%;cf") < 0) {
         return desired;
     }
 
     var hour = now.get_hour();
-    // convert from 0-23 to 1-12
-    if (hour > 12) {
-        hour -= 12;
+
+    var halves = roundToHalves(now);
+    // round the fourth quarter to the next hour
+    var roundedHour = halves == 2 ? hour + 1 : hour;
+    // convert to 12 hour clock
+    var roundedHour12 = roundedHour % 12;
+    // convert 0 to 12
+    if (roundedHour12 == 0) {
+        roundedHour12 = 12;
     }
-    if (hour == 0) {
-        hour = 12;
-    }
-    var clockFaceCodePoint = 0x1f550 + (hour - 1);
-    var minute = now.get_minute();
-    if (minute >= 30) {
+
+    var clockFaceCodePoint = 0x1f550 + (roundedHour12 - 1);
+
+    var isHalfPast = halves == 1;
+    if (isHalfPast) {
         clockFaceCodePoint += 12;
     }
+
     var repl;
     if (String.fromCodePoint) {
         repl = String.fromCodePoint(clockFaceCodePoint)
