@@ -20,7 +20,7 @@ msgstr ""
 
 #: prefs.js:51
 msgid "Text to display instead of the clock"
-msgstr "De in plaats van de klok te tonen tekst"
+msgstr "De tekst op de plek van de klok"
 
 #: prefs.js:64
 msgid "Some examples:"
