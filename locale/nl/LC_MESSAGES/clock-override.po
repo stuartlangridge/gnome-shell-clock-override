@@ -1,0 +1,68 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-15 18:48+0200\n"
+"PO-Revision-Date: 2020-11-02 13:48+0100\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.1\n"
+"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: nl\n"
+
+#: prefs.js:51
+msgid "Text to display instead of the clock"
+msgstr "De tekst op de plek van de klok"
+
+#: prefs.js:64
+msgid "Some examples:"
+msgstr "Enkele voorbeelden:"
+
+#: prefs.js:78
+msgid "The time in 24-hour notation (14:50)"
+msgstr "De tijd in 24-uursnotatie (14:50)"
+
+#: prefs.js:79
+msgid "The time in 12-hour notation with seconds (2:50:10 pm)"
+msgstr "De tijd in 12-uursnotatie, met seconden (2:50:10 pm)"
+
+#: prefs.js:80
+msgid "A bell"
+msgstr "Een bel"
+
+#: prefs.js:81
+msgid "An emoji clock face"
+msgstr "Een emojiwijzerplaat"
+
+#: prefs.js:82
+msgid "Slow time (quarters as fractions)"
+msgstr "Langzame tijd (kwarten in plaats van breuken)"
+
+#: prefs.js:83
+msgid "ISO date and time (2014-01-30T14:50:10)"
+msgstr "ISO-datum en -tijd (2014-01-30T14:50:10)"
+
+#: prefs.js:84
+msgid "Local and Internet time"
+msgstr "Lokale en internettijd"
+
+#: prefs.js:85
+msgid "Something sillier"
+msgstr "Iets geks"
+
+#: prefs.js:85
+msgid "It is %M minutes past hour %H"
+msgstr "Het is %M minuten na %H"
+
+#: prefs.js:120
+#, javascript-format
+msgid "What do all these %x codes mean?"
+msgstr "Wat betekenen al die %x-codes?"
