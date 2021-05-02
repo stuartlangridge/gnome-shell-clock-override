@@ -2,8 +2,7 @@
   "name": "%_NAME_%",
   "description": "Customize the date and time format displayed in clock in the top bar in GNOME Shell. Add as much or as little time information you want with extensive formatting options including an emoji clock face and Internet Time (.beat).",
   "shell-version": [
-    "3.18",
-    "3.28"
+    "40"
   ],
   "settings-schema": "org.gnome.shell.extensions.clock-override",
   "url": "https://github.com/stuartlangridge/gnome-shell-clock-override",

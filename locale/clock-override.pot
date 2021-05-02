@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-15 18:48+0200\n"
+"POT-Creation-Date: 2021-05-02 23:05+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -61,7 +61,11 @@ msgstr ""
 msgid "It is %M minutes past hour %H"
 msgstr ""
 
-#: prefs.js:120
+#: prefs.js:86
+msgid "Sunday | 2021-05-02 | 23:02"
+msgstr ""
+
+#: prefs.js:118
 #, javascript-format
 msgid "What do all these %x codes mean?"
 msgstr ""

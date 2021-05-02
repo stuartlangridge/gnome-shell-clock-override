@@ -82,7 +82,8 @@ const ClockOverrideSettings = new GObject.Class({
             [_("Slow time (quarters as fractions)"), "%H %;vf"],
             [_("ISO date and time (2014-01-30T14:50:10)"), "%FT%T"],
             [_("Local and Internet time"), "%H:%M @%;@."],
-            [_("Something sillier"), _("It is %M minutes past hour %H")]
+            [_("Something sillier"), _("It is %M minutes past hour %H")],
+            [_("Sunday | 2021-05-02 | 23:02"), _("%A | %F | %R")]
         ].forEach(function(eg) {
             let l = new Gtk.Label({
                 label: '<b>' + eg[0] + '</b>:',
@@ -93,18 +94,15 @@ const ClockOverrideSettings = new GObject.Class({
             /* It would be nicer to use just a Label with a hyperlink in it here, for accessibility
                reasons, but god alone knows how to remove the underline on a label, thanks to the
                lack of Gtk CSS examples. And a Button would be ugly. So an EventBox it is for now. */
-            let eb = new Gtk.EventBox({
-                hexpand: true,
-                halign: Gtk.Align.START
-            });
+            /* SL 2021-05-02: GTK4 no longer "supports" EventBoxes and GtkLabel does not respond to button-press-event
+               so I used links (again) which are not underlined (at least on my machine) */
             let r = new Gtk.Label({
-                label: '<tt>' + eg[1] + '</tt>',
+                label: '<a href="#"><tt>' + eg[1] + '</tt></a>',
                 use_markup: true,
                 hexpand: true,
                 halign: Gtk.Align.START
             });
-            eb.add(r);
-            eb.connect("button-press-event", Lang.bind(grid, function(w) {
+            r.connect("activate-link", Lang.bind(grid, function(w) {
                 this.update_textbox_value(eg[1]);
                 grid._settings.set_string('override-string', eg[1]);
                 return true;
@@ -112,7 +110,7 @@ const ClockOverrideSettings = new GObject.Class({
             r.get_style_context().add_provider(css, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
 
             grid.attach(l, 0, rownumber, 1, 1);
-            grid.attach(eb, 1, rownumber, 2, 1);
+            grid.attach(r, 1, rownumber, 2, 1);
             rownumber += 1;
         });
 
@@ -136,7 +134,6 @@ const ClockOverrideSettings = new GObject.Class({
 
 function buildPrefsWidget() {
      let widget = new ClockOverrideSettings();
-     widget.show_all();
 
      return widget;
 }
