@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GNOME Shell Extension Clock Override\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-08-15 18:48+0200\n"
+"POT-Creation-Date: 2021-05-02 23:03+0200\n"
 "PO-Revision-Date: 2018-08-04 11:10+0200\n"
 "Last-Translator: Luis Zurro <https://pistachitos.com>\n"
 "Language-Team: Luis Zurro\n"
@@ -62,7 +62,11 @@ msgstr "Algo ridículo"
 msgid "It is %M minutes past hour %H"
 msgstr "Son las %H y %M minutos"
 
-#: prefs.js:120
+#: prefs.js:86
+msgid "Sunday | 2021-05-02 | 23:02"
+msgstr ""
+
+#: prefs.js:118
 #, javascript-format
 msgid "What do all these %x codes mean?"
 msgstr "¿Qué significan todos los códigos %x?"
