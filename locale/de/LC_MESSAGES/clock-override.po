@@ -34,7 +34,7 @@ msgstr "Die Zeit in 24-Stunden-Darstellung (14:50)"
 
 #: prefs.js:79
 msgid "The time in 12-hour notation with seconds (2:50:10 pm)"
-msgstr "Die Zeit in 12-Stunden-Darstellung mit Sekunden (2:50:00 pm)"
+msgstr "Die Zeit in 12-Stunden-Darstellung mit Sekunden (2:50:10 pm)"
 
 #: prefs.js:80
 msgid "A bell"
