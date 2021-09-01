@@ -31,12 +31,12 @@ function enable() {
     var sA = Main.panel._statusArea;
     if (!sA) { sA = Main.panel.statusArea; }
 
-    if (!sA || !sA.dateMenu || !sA.dateMenu.actor) {
+    if (!sA || !sA.dateMenu) {
         print("Looks like Shell has changed where things live again; aborting.");
         return;
     }
 
-    sA.dateMenu.actor.first_child.get_children().forEach(function(w) {
+    sA.dateMenu.first_child.get_children().forEach(function(w) {
         // assume that the text label is the first StLabel we find.
         // This is dodgy behaviour but there's no reliable way to
         // work out which it is.
