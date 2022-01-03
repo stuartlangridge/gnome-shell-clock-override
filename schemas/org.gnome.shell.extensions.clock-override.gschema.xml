@@ -3,7 +3,7 @@
     <key name="override-string" type="s">
       <default>'%FT%R:%S%:z'</default>
       <summary>Override string</summary>
-      <description>The text to display where the clock is. You can use special characters to include the time and date; for example '%Y-%m-%d %H.%M.%S', and see https://developer.gnome.org/glib/stable/glib-GDateTime.html#g-date-time-format</description>
+      <description>The text to display where the clock is. You can use special characters to include the time and date; for example '%Y-%m-%d %H.%M.%S', and see https://docs.gtk.org/glib/method.DateTime.format.html</description>
    </key>
   </schema>
 </schemalist>
