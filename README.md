@@ -7,7 +7,7 @@ Gnome Shell doesn't permit many changes to the format of its clock; in particula
 
 ![Extension screenshot](assets/screenshot.png)
 
-For techies, we use the [`GLib GDateTime` codes](https://developer.gnome.org/glib/stable/glib-GDateTime.html#g-date-time-format) to specify actual times in your clock string, with three additions:
+For techies, we use the [`GLib GDateTime` codes](https://docs.gtk.org/glib/method.DateTime.format.html) to specify actual times in your clock string, with three additions:
 
  * `%;cf`, a little emoji Unicode clock face (thanks to [dsboger](https://github.com/stuartlangridge/gnome-shell-clock-override/commit/5941974a39d3dfa4f7adb227bdbe3bc50118bbc9) for that!)
  * `%;vf`, quarters as vulgar fractions
