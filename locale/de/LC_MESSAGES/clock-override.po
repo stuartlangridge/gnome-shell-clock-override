@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: GNOME Shell Extension Clock Override\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-20 18:26+0200\n"
+"POT-Creation-Date: 2021-05-02 23:03+0200\n"
 "PO-Revision-Date: 2018-08-15 18:36+0200\n"
 "Last-Translator: Jonatan Hatakeyama Zeidler <jonatan_zeidler@gmx.de>\n"
 "Language-Team: Jonatan H. Zeidler, Matthäus Brandl\n"
@@ -18,7 +18,6 @@ msgstr ""
 "X-Generator: Poedit 2.0.6\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
 
 #: prefs.js:51
 msgid "Text to display instead of the clock"
@@ -56,8 +55,8 @@ msgstr "Datum und Zeit nach ISO (2014-01-30T14:50:10)"
 msgid "Local and Internet time"
 msgstr "Ortszeit und Internetzeit"
 
-#: prefs.js:85
 # In this context silly seems to convey a notion of funny instead of stupid. Hence "albern" instead of "dumm".
+#: prefs.js:85
 msgid "Something sillier"
 msgstr "Etwas Alberneres"
 
@@ -65,7 +64,11 @@ msgstr "Etwas Alberneres"
 msgid "It is %M minutes past hour %H"
 msgstr "Es ist %M Minuten nach %H Uhr"
 
-#: prefs.js:120
+#: prefs.js:86
+msgid "Sunday | 2021-05-02 | 23:02"
+msgstr "Sonntag | 2021-05-02 | 23:02"
+
+#: prefs.js:118
 #, javascript-format
 msgid "What do all these %x codes mean?"
 msgstr "Was bedeuten all diese Codes mit %x?"
