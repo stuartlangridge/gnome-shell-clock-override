@@ -1,0 +1,68 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Pablo Huguet, 2023.
+# <https://linktr.ee/VoodooPablo>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: GNOME Shell Extension Clock Override\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-08-15 18:48+0200\n"
+"PO-Revision-Date: 2023-08-18 02:00+0200\n"
+"Last-Translator: Pablo Huguet <https://linktr.ee/VoodooPablo>\n"
+"Language-Team: Pablo Huguet <https://linktr.ee/VoodooPablo>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: prefs.js:51
+msgid "Text to display instead of the clock"
+msgstr "Text per mostrar en lloc del rellotge"
+
+#: prefs.js:64
+msgid "Some examples:"
+msgstr "Alguns exemples:"
+
+#: prefs.js:78
+msgid "The time in 24-hour notation (14:50)"
+msgstr "L'hora en notació de 24 hores  (14:50)"
+
+#: prefs.js:79
+msgid "The time in 12-hour notation with seconds (2:50:10 pm)"
+msgstr "El temps en notació de 12 hores amb segons (2:50:10 pm)"
+
+#: prefs.js:80
+msgid "A bell"
+msgstr "Una campana"
+
+#: prefs.js:81
+msgid "An emoji clock face"
+msgstr "Emoji d'un rellotge"
+
+#: prefs.js:82
+msgid "Slow time (quarters as fractions)"
+msgstr "Temps lent (quarts com a fraccions)"
+
+#: prefs.js:83
+msgid "ISO date and time (2014-01-30T14:50:10)"
+msgstr "Data i hora ISO (2014-01-30T14:50:10)"
+
+#: prefs.js:84
+msgid "Local and Internet time"
+msgstr "Hora local i d'Internet"
+
+#: prefs.js:85
+msgid "Something sillier"
+msgstr "Alguna cosa més ximple"
+
+#: prefs.js:85
+msgid "It is %M minutes past hour %H"
+msgstr "Són %M minuts passat l'hora %H"
+
+#: prefs.js:120
+#, javascript-format
+msgid "What do all these %x codes mean?"
+msgstr "Què signifiquen tots aquests codis %x?"
